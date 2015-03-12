@@ -3,6 +3,12 @@ chicago-latex-template
 
 A template for a scholarly preprint using Chicago-style bibtex refs. 
 
+authors:
+
+-   Ryan Reece ryan.reece@cern.ch
+
+created: March 11, 2015
+
 
 Note the Makefile
 -------------------------------------------------------------------------------
@@ -13,7 +19,7 @@ The Makefile is rather general and could be used outside of this template.
         The Makefile that automatically does what you want for (pdf)latex.
     
     SYNOPSIS
-        make [pdf|ps|dvi|dvipdf|mf|clean|distclean|realclean|over]
+        make [pdf|ps|dvi|dvipdf|mf|clean|distclean|realclean|over|draft]
     
     DESCRIPTION
         Builds virtually any LaTeX document with *no* configuration.

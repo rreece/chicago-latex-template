@@ -2,7 +2,7 @@
 #     The Makefile that automatically does what you want for (pdf)latex.
 # 
 # SYNOPSIS
-#     make [pdf|ps|dvi|dvipdf|mf|clean|distclean|realclean|over]
+#     make [pdf|ps|dvi|dvipdf|mf|clean|distclean|realclean|over|draft]
 # 
 # DESCRIPTION
 #     Builds virtually any LaTeX document with *no* configuration.
