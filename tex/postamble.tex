@@ -1,0 +1,17 @@
+
+%% if draft
+\ifthenelse{\boolean{boolIsDraft}}{
+    \lhead{\textlcsc{draft:} \myversion}
+    \usepackage{lineno}
+    \linenumbers
+}{
+    % pass
+}
+
+%% feynmf for feynman diagrams
+\usepackage{feynmf}
+\setlength{\unitlength}{1mm}
+
+%% line spacing
+\newcommand{\mylinespacing}{1.25}
+

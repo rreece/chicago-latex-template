@@ -18,24 +18,11 @@
 %% define title and authors
 \input{tex/docdefs}
 
-%% feynmf for feynman diagrams
-\usepackage{feynmf}
-\setlength{\unitlength}{1mm}
-
-%% line spacing
-\newcommand{\mylinespacing}{1.25}
+%% load the prostamble that configures stuff needed after docdefs
+\input{tex/postamble}
 
 %% to temporarily include only a single chapter
 %\includeonly{tex/example}
-
-%% if draft
-\ifthenelse{\boolean{boolIsDraft}}{
-    \lhead{\textlcsc{draft:} \myversion}
-    \usepackage{lineno}
-    \linenumbers
-}{
-    % pass
-}
 
 
 %%--------------------------------------------------------------------
