@@ -1,0 +1,126 @@
+%%--------------------------------------------------------------------
+%% file:       example.tex
+%% authors:    Susan Fowler  <susan.fowlerr@gmail.com>
+%%             Ryan Reece  <ryan.reece@cern.ch>
+%% created:    2014-03-13
+%%
+%%--------------------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
+
+
+%%--------------------------------------------------------------------
+%% preamble
+%%--------------------------------------------------------------------
+
+%% load the preamble that configures a bunch of document settings
+\input{tex/preamble}
+
+%% define title and authors
+\input{tex/docdefs}
+
+%% feynmf for feynman diagrams
+\usepackage{feynmf}
+\setlength{\unitlength}{1mm}
+
+%% line spacing
+\newcommand{\mylinespacing}{1.25}
+
+%% to temporarily include only a single chapter
+%\includeonly{tex/example}
+
+%% if draft
+\ifthenelse{\boolean{boolIsDraft}}{
+    \lhead{\textlcsc{draft:} \myversion}
+    \usepackage{lineno}
+    \linenumbers
+}{
+    % pass
+}
+
+
+%%--------------------------------------------------------------------
+%% begin the document
+%%--------------------------------------------------------------------
+\begin{document}
+%\begin{fmffile}{example-feyn}
+
+
+%%--------------------------------------------------------------------
+%% title page
+%% abstract
+%%--------------------------------------------------------------------
+%\frontmatter %% (only needed for memoir/report/books)
+
+\input{tex/titlepage}
+%\clearpage
+
+
+%%--------------------------------------------------------------------
+%% table of contents
+%%--------------------------------------------------------------------
+\tableofcontents
+\clearpage
+
+
+%%--------------------------------------------------------------------
+%% preface
+%%--------------------------------------------------------------------
+%\include{tex/preface}
+
+
+%%--------------------------------------------------------------------
+%% main sections
+%%--------------------------------------------------------------------
+%\mainmatter %% (only needed for memoir/report/books)
+
+\ifthenelse{\boolean{boolIsDraft}}{
+    \setcounter{section}{-1}
+    \input{tex/notes}
+    \clearpage
+}{
+    % pass
+}
+
+%%--------------------------------------------------------------------
+\begin{spacing}{\mylinespacing}
+
+\include{tex/introduction}
+\include{tex/example}
+\include{tex/conclusion}
+
+%% Add new sections just above here ^
+
+
+%%--------------------------------------------------------------------
+%% appendix
+%%--------------------------------------------------------------------
+%\appendix
+%\include{tex/apx-sm}
+%\include{tex/apx-stuff}
+
+%%--------------------------------------------------------------------
+\end{spacing}
+
+
+%%--------------------------------------------------------------------
+%% bibliography
+%%--------------------------------------------------------------------
+%\backmatter %% (only needed for memoir/report/books)
+
+\raggedright
+\addcontentsline{toc}{section}{References} % to add "References" to the TOC
+
+%\bibliographystyle{abbrv}
+%\bibliographystyle{style/atlasnote}
+\bibliographystyle{chicago}
+\bibliography{bibs/example}
+%\bibliography{bibs/great-papers}
+
+%% Add bib files to the line above like this:
+%% \bibliography{bibs/theory,bibs/atlas}
+
+
+%%--------------------------------------------------------------------
+%\end{fmffile}
+\end{document}
+
