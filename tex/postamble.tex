@@ -1,7 +1,7 @@
 
 %% if draft
 \ifthenelse{\boolean{boolIsDraft}}{
-    \lhead{\textlcsc{draft:} \myversion}
+    \fancyhead[LO]{\textlcsc{draft}: \myversion}
     \usepackage{lineno}
     \linenumbers
 }{

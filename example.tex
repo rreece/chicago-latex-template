@@ -1,11 +1,10 @@
 %%--------------------------------------------------------------------
 %% file:       example.tex
-%% authors:    Susan Fowler  <susan.fowlerr@gmail.com>
-%%             Ryan Reece  <ryan.reece@cern.ch>
+%% authors:    Ryan Reece  <ryan.reece@cern.ch>
 %% created:    2014-03-13
 %%
 %%--------------------------------------------------------------------
-\documentclass[letterpaper,11pt]{article}
+\documentclass[11pt,openany,twoside]{article}
 
 
 %%--------------------------------------------------------------------
@@ -62,7 +61,7 @@
 
 \ifthenelse{\boolean{boolIsDraft}}{
     \setcounter{section}{-1}
-    \input{tex/notes}
+    \input{tex/notes} % include notes to reviewers
     \clearpage
 }{
     % pass
@@ -74,6 +73,7 @@
 \include{tex/introduction}
 \include{tex/example}
 \include{tex/conclusion}
+\input{tex/acknowledgments}
 
 %% Add new sections just above here ^
 
@@ -101,7 +101,6 @@
 %\bibliographystyle{style/atlasnote}
 \bibliographystyle{chicago}
 \bibliography{bibs/example}
-%\bibliography{bibs/great-papers}
 
 %% Add bib files to the line above like this:
 %% \bibliography{bibs/theory,bibs/atlas}

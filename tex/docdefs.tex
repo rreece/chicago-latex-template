@@ -1,35 +1,52 @@
 %% ----------------------------------------------------------------------------
+%% is draft?
+%% ----------------------------------------------------------------------------
 
-\usepackage{authblk}
 \usepackage{ifthen}
 \newboolean{boolIsDraft}
 \setboolean{boolIsDraft}{true}
 \newcommand{\myversion}{v0.0}
 
+
+%% ----------------------------------------------------------------------------
+%% title & headers
 %% ----------------------------------------------------------------------------
 
-\title{Example Document}
+\newcommand{\mytitle}{Example Document}
+\title{\mytitle}
+
 \newcommand{\myheader}{Example Document}
+\newcommand{\myshortauthor}{R. Reece}
+
 
 %% ----------------------------------------------------------------------------
+%% authors
+%% ----------------------------------------------------------------------------
+
+\usepackage{authblk}
     
-\author[1]{Joe Collaborator}
-\affil[1]{\footnotesize joe.collaborator@awesome.com\\
-    \href{http://joes.website.edu/}{joes.website.edu}\newline
-    \mbox{Physics Department\\ 209 S. 33rd St.}
-    \mbox{University of Pennsylvania\\ Philadelphia, PA 19104\\ USA}
-    \vspace{5mm}
-}
-
 %% ----------------------------------------------------------------------------
 
-\author[2]{Ryan Reece}
-\affil[2]{\footnotesize ryan.reece@cern.ch\\
+\author[1]{Ryan Reece}
+\affil[1]{\footnotesize ryan.reece@cern.ch\\
     \href{http://reece.scipp.ucsc.edu/}{reece.scipp.ucsc.edu}\\
     \mbox{Santa Cruz Institute for Particle Physics\\ University of California}\\
     \mbox{1156 High St.\\ Santa Cruz, CA 95064\\ USA}
 }
 
 %% ----------------------------------------------------------------------------
+
+\author[2]{Joe Collaborator}
+\affil[2]{\footnotesize joe.collaborator@awesome.com\\
+    \href{http://joes.website.edu/}{joes.website.edu}\\
+    \mbox{Physics Department\\ 209 S. 33rd St.}\\
+    \mbox{University of Pennsylvania\\ Philadelphia, PA 19104\\ USA}
+    \vspace{5mm}
+}
+
+%% ----------------------------------------------------------------------------
+
+
+
 
 

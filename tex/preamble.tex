@@ -11,6 +11,7 @@
 \usepackage{bm}
 \usepackage{braket}
 \usepackage{cancel}
+%\usepackage{chapterbib}
 %\usepackage{mathtools}
 %\usepackage{morefloats}
 %\usepackage{multicol}
@@ -34,11 +35,12 @@
 
 %% fancyhdr
 \usepackage{fancyhdr}
-\fancyhf{}
-\rhead{\textlcsc{\myheader}}
-\cfoot{\thepage}
-\renewcommand\headrulewidth{0pt}
+\fancyhf{} % clear all header and footer fields
+\fancyhead[RO]{\textit{\myshortauthor}}
+\fancyhead[LE]{\textit{\myheader}}
+\fancyfoot[CO,CE]{\thepage}
 \pagestyle{fancy}
+%\renewcommand\headrulewidth{0pt}
 
 %% natbib
 \usepackage{natbib}
@@ -46,7 +48,6 @@
 
 %% caption style
 \usepackage[format=hang, labelfont=bf, font=small]{caption}
-
 
 %% cleveref
 \usepackage[capitalize]{cleveref}
