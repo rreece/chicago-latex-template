@@ -30,6 +30,13 @@
 
 %% ----------------------------------------------------------------------------
 
+%% feynmf for feynman diagrams
+\usepackage{feynmf}
+\setlength{\unitlength}{1mm}
+
+%% line spacing
+\newcommand{\mylinespacing}{1.25}
+
 \usepackage{textcase}
 \newcommand\textlcsc[1]{\textsc{\MakeTextLowercase{#1}}}
 
@@ -45,6 +52,8 @@
 %% natbib
 \usepackage{natbib}
 \setcitestyle{aysep={}}
+\renewcommand{\bibfont}{\footnotesize}
+\setlength{\bibsep}{2pt}
 
 %% caption style
 \usepackage[format=hang, labelfont=bf, font=small]{caption}
